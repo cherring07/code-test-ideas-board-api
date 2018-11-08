@@ -25,7 +25,7 @@ def ideas(request):
         json
 
     """
-    ideas = Idea.objects.order_by('created_date')
+    ideas = Idea.objects.order_by('-created_date')
 
     return json_response(create_ideas(ideas))
 
